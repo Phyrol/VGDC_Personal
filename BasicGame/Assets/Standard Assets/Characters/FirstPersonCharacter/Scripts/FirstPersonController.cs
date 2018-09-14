@@ -238,20 +238,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
-        private void OnControllerColliderHit(ControllerColliderHit hit)
+        void OnControllerColliderHit(ControllerColliderHit hit)
         {
-            Rigidbody body = hit.collider.attachedRigidbody;
-            //dont move the rigidbody if the character is on top of it
-            if (m_CollisionFlags == CollisionFlags.Below)
+            if (hit.gameObject.tag.Equals("Ammo"))
             {
-                return;
-            }
+                Debug.Log("Reloading");
+                gameObject.GetComponent<Shoot>().Reload();
+                Destroy(hit.gameObject);
 
-            if (body == null || body.isKinematic)
-            {
-                return;
             }
-            body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
+            Debug.Log(hit.gameObject.name);
         }
     }
 }

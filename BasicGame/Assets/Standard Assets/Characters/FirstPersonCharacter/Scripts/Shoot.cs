@@ -7,6 +7,7 @@ public class Shoot : MonoBehaviour {
     //for shooting the bullet -- added for Lesson 1
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
+    public int ammo = 3;
 
     // Use this for initialization
     void Start () {
@@ -17,9 +18,13 @@ public class Shoot : MonoBehaviour {
 	void Update () {
 
         // added for bullet for lesson 1
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Fire();
+            if (ammo > 0)
+            {
+                Fire();
+                ammo--;
+            }
         }
     }
 
@@ -37,5 +42,11 @@ public class Shoot : MonoBehaviour {
 
         // Destroy the bullet after 2 seconds
         Destroy(bullet, 2f);
+    }
+
+    //reloads
+    public void Reload()
+    {
+        ammo = 3;
     }
 }
