@@ -242,12 +242,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             if (hit.gameObject.tag.Equals("Ammo"))
             {
-                Debug.Log("Reloading");
                 gameObject.GetComponent<Shoot>().Reload();
                 Destroy(hit.gameObject);
 
             }
-            Debug.Log(hit.gameObject.name);
         }
     }
 }
