@@ -10,16 +10,12 @@ public class Shoot : MonoBehaviour {
     public Transform bulletSpawn;
 
     private int ammo;
-    private int maxAmmo;
+    public int maxAmmo;
     public Text ammoCount;
-
-    private int score;
-    public Text winText;
 
     // Use this for initialization
     void Start () {
-        ammo = 5;
-        maxAmmo = 5;
+        ammo = maxAmmo;
         SetAmmoText();
 	}
 	
@@ -32,7 +28,6 @@ public class Shoot : MonoBehaviour {
             if (ammo > 0)
             {
                 Fire();
-                ammo--;
             }
         }
 
@@ -56,6 +51,8 @@ public class Shoot : MonoBehaviour {
             bulletSpawn.position,
             bulletSpawn.rotation);
 
+        ammo--;
+
         // Add velocity to the bullet
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 20;
 
@@ -78,7 +75,7 @@ public class Shoot : MonoBehaviour {
         }
         else
         {
-            ammoCount.text = "Ammo: " + ammo.ToString() + "/5";
+            ammoCount.text = "Ammo: " + ammo.ToString() + "/" + maxAmmo.ToString();
         }
 
     }
