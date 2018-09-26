@@ -42,6 +42,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+        //added for lessong 3, using raycast **********
+        public float raycastLength = 6f;
+        //*********************************************
+
         // Use this for initialization
         private void Start()
         {
@@ -80,6 +84,24 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+
+            //added for lesson 3, using raycast
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, raycastLength))
+            {
+                // checks if the object has the tag ammo
+                if (hit.collider.gameObject.tag == "Ammo")
+                {
+                    // checks for 'e' to be pressed
+                    if (Input.GetKeyDown("e"))
+                    {
+                        gameObject.GetComponent<Shoot>().Reload();
+                        Destroy(hit.collider.gameObject);
+                    }
+                }
+            }
         }
 
         private void PlayLandingSound()
@@ -235,17 +257,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void RotateView()
         {
             m_MouseLook.LookRotation (transform, m_Camera.transform);
-        }
-
-
-        void OnControllerColliderHit(ControllerColliderHit hit)
-        {
-            if (hit.gameObject.tag.Equals("Ammo"))
-            {
-                gameObject.GetComponent<Shoot>().Reload();
-                Destroy(hit.gameObject);
-
-            }
         }
     }
 }
