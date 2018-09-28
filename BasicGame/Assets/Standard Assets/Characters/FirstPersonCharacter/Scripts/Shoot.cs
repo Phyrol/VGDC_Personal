@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour {
@@ -46,7 +44,7 @@ public class Shoot : MonoBehaviour {
     void Fire()
     {
         // Create the Bullet from the Bullet Prefab
-        var bullet = (GameObject)Instantiate(
+        var bullet = Instantiate(
             bulletPrefab,
             bulletSpawn.position,
             bulletSpawn.rotation);
