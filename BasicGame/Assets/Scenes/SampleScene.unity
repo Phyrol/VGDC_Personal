@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -122,11 +122,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.66
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1388353091598556, guid: 7b9f03991743a8d4cb97239c45ced8d8,
     type: 2}
-  bulletSpawn: {fileID: 4148907543759866, guid: 6cd172c080450a04794fde9b85f31fec,
+  bulletSpawn: {fileID: 4236412584965146, guid: cd8b3c96c47cda5489f468aa1d1bf7fb,
     type: 2}
   maxAmmo: 6
   ammoCount: {fileID: 1654485530}
@@ -576,11 +576,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4902576022791422, guid: 9d1a1a6baad41344e88cf48131e73f18, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.5000007
+      value: 0.50000143
       objectReference: {fileID: 0}
     - target: {fileID: 4902576022791422, guid: 9d1a1a6baad41344e88cf48131e73f18, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.25000036
+      value: 0.25000072
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d1a1a6baad41344e88cf48131e73f18, type: 2}
