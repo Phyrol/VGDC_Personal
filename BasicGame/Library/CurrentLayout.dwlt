@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 9
+  controlID: 34
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 10
+  controlID: 35
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 11
+  controlID: 36
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -323,20 +323,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts
+    - Assets/Prefab
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts
+  - Assets/Prefab
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Brad\Desktop\VGDC_Personal\BasicGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 5}
-    m_SelectedIDs: 5a2b0000
-    m_LastClickedID: 11098
-    m_ExpandedIDs: 00000000d62a0000202c0000422e00008c2e000000ca9a3b
+    m_SelectedIDs: 0c0b0000
+    m_LastClickedID: 2828
+    m_ExpandedIDs: 00000000b2090000fa0a00001e0d0000680d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -364,7 +364,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d62a0000202c0000422e00008c2e0000
+    m_ExpandedIDs: 00000000b2090000fa0a00001e0d0000680d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -480,9 +480,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c8050000
-    m_LastClickedID: 0
-    m_ExpandedIDs: 82f9ffff84f9ffff00000000642f0000842f0000
+    m_SelectedIDs: 7a78ffff
+    m_LastClickedID: -34694
+    m_ExpandedIDs: bafbffffe6fbffff000000004c0e00006c0e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -532,14 +532,14 @@ MonoBehaviour:
     height: 421
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 1753.3829484600817
+  lastFramingTime: 221.8225839812935
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3.8137853, y: -0.5641134, z: -3.6490693}
+    m_Target: {x: -2.8065407, y: -1.5036123, z: -3.2580173}
     speed: 2
-    m_Value: {x: -3.8137853, y: -0.5641134, z: -3.6490693}
+    m_Value: {x: -2.8065407, y: -1.5036123, z: -3.2580173}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -567,13 +567,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.07683807, y: 0.45951813, z: -0.039944656, w: 0.88393635}
+    m_Target: {x: 0.22212374, y: 0.31169865, z: -0.07519169, w: 0.9207884}
     speed: 2
-    m_Value: {x: 0.07683807, y: 0.45951813, z: -0.039944656, w: 0.88393635}
+    m_Value: {x: 0.22212374, y: 0.31169865, z: -0.07519169, w: 0.9207884}
   m_Size:
-    m_Target: 4.288612
+    m_Target: 2.7452343
     speed: 2
-    m_Value: 4.288612
+    m_Value: 2.7452343
   m_Ortho:
     m_Target: 0
     speed: 2
