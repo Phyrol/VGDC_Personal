@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour {
@@ -7,45 +8,33 @@ public class Shoot : MonoBehaviour {
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
 
-    public int ammo;
-    public int maxAmmo;
+    private int ammo;
+    private int maxAmmo;
     public Text ammoCount;
+    private Boolean hasAmmo = true;
 
     // Use this for initialization
     void Start () {
-        ammo = maxAmmo;
-        SetAmmoText();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-        // added for bullet for lesson 1
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            if (ammo > 0)
-            {
-                Fire();
-            }
-        }
-
-        //uses methong SetAmmoText to change the text displaying ammo left
-        if (ammo != 0)
-        {
-            SetAmmoText();
-        }
-        else
-        {
-            SetAmmoText();
-        }
     }
 
-    public void setAmmo(int _maxAmmo)
+    public void SetAmmo(int _maxAmmo)
     {
-        int ammo;
-        int maxAmmo;
         maxAmmo = _maxAmmo;
         ammo = maxAmmo;
+    }
+
+    public Boolean getAmmo()
+    {
+        if (ammo == 0)
+        {
+            hasAmmo = false;
+        }
+        return hasAmmo;
     }
 
     // Shoots a bullet -- added for Lesson 1
@@ -60,7 +49,7 @@ public class Shoot : MonoBehaviour {
         ammo--;
 
         // Add velocity to the bullet
-        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 20;
+        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 40;
 
         // Destroy the bullet after 2 seconds
         Destroy(bullet, 2f);
@@ -75,6 +64,7 @@ public class Shoot : MonoBehaviour {
     //method for changing the ammo text
     public void SetAmmoText()
     {
+        
         if (ammo == 0)
         {
             ammoCount.text = "Out of ammo";

@@ -6,13 +6,19 @@ public class Pistol : Shoot {
 
 	// Use this for initialization
 	void Start () {
-        ammo = maxAmmo;
-        maxAmmo = 20;
-        SetAmmoText();
+        SetAmmo(6);
     }
 	
 	// Update is called once per frame
 	void Update () {
-        Fire();
-	}
+        SetAmmoText();
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            if (getAmmo())
+            {
+                Fire();
+            }
+        }
+    }
 }
