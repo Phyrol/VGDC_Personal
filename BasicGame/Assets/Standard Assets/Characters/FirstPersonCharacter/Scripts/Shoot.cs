@@ -7,7 +7,7 @@ public class Shoot : MonoBehaviour {
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
 
-    private int ammo;
+    public int ammo;
     public int maxAmmo;
     public Text ammoCount;
 
@@ -40,8 +40,16 @@ public class Shoot : MonoBehaviour {
         }
     }
 
+    public void setAmmo(int _maxAmmo)
+    {
+        int ammo;
+        int maxAmmo;
+        maxAmmo = _maxAmmo;
+        ammo = maxAmmo;
+    }
+
     // Shoots a bullet -- added for Lesson 1
-    void Fire()
+    public void Fire()
     {
         // Create the Bullet from the Bullet Prefab
         var bullet = Instantiate(
@@ -65,7 +73,7 @@ public class Shoot : MonoBehaviour {
     }
 
     //method for changing the ammo text
-    void SetAmmoText()
+    public void SetAmmoText()
     {
         if (ammo == 0)
         {
