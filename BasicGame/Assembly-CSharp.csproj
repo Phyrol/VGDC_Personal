@@ -63,6 +63,10 @@
   <ItemGroup>
     <Compile Include="Assets\collider.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Gun.cs" />
+    <Compile Include="Assets\Scripts\Pistol.cs" />
+    <Compile Include="Assets\Scripts\Raycast.cs" />
+    <Compile Include="Assets\Scripts\Rifle.cs" />
     <Compile Include="Assets\Scripts\WeaponSwitching.cs" />
     <Compile Include="Assets\Scripts\WinText.cs" />
     <Reference Include="UnityEditor.StandardEvents">
