@@ -182,6 +182,24 @@ Prefab:
       propertyPath: m_TagString
       value: Button
       objectReference: {fileID: 0}
+    - target: {fileID: 114472227943953766, guid: e04e2a127421e3b42a60c585c85cd844,
+        type: 2}
+      propertyPath: cakeObject
+      value: 
+      objectReference: {fileID: 1972885789701768, guid: 2fba38b9293d3db4d91e437aed0c9670,
+        type: 2}
+    - target: {fileID: 114012252182371270, guid: e04e2a127421e3b42a60c585c85cd844,
+        type: 2}
+      propertyPath: cookieObject
+      value: 
+      objectReference: {fileID: 1265826543391428, guid: 78465260ba225f146a557ca041299edc,
+        type: 2}
+    - target: {fileID: 114834192889749072, guid: e04e2a127421e3b42a60c585c85cd844,
+        type: 2}
+      propertyPath: iceCreamObject
+      value: 
+      objectReference: {fileID: 1069100141730360, guid: 2278fb82c6786b6499579aa25746dbf5,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e04e2a127421e3b42a60c585c85cd844, type: 2}
   m_IsPrefabAsset: 0
@@ -483,6 +501,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &612786963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 612786964}
+  m_Layer: 0
+  m_Name: OvenManager
+  m_TagString: OvenManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &612786964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 612786963}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1304344125
 Prefab:

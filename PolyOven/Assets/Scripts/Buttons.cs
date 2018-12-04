@@ -9,6 +9,13 @@ public class Buttons : MonoBehaviour {
     pastryInfo iceCream;
 
     public GameObject preFabSpawn;
+    public GameObject cakeObject;
+    public GameObject cookieObject;
+    public GameObject iceCreamObject;
+    GameObject newCake;
+    GameObject newCookie;
+    GameObject newIceCream;
+    GameObject ovenManager = GameObject.FindGameObjectWithTag("OvenManager");
 
     private Vector3 spawnPoint = new Vector3(-6.121f, -0.14f, -6.605f);
 
@@ -34,7 +41,18 @@ public class Buttons : MonoBehaviour {
     {
         if (transform.name.Equals("CakeButton"))
         {
-
+            newCake = Instantiate(cakeObject, transform.position, transform.rotation);
+            newCake.transform.SetParent(GameObject.FindGameObjectWithTag("OvenManager").transform, false);
+        }
+        if (transform.name.Equals("CookieButton"))
+        {
+            newCookie = Instantiate(cookieObject, spawnPoint, transform.rotation) as GameObject;
+            newCookie.transform.SetParent(ovenManager.transform, false);
+        }
+        if (transform.name.Equals("IceCreamButton"))
+        {
+            newIceCream = Instantiate(iceCreamObject, spawnPoint, transform.rotation) as GameObject;
+            newIceCream.transform.SetParent(ovenManager.transform, false);
         }
     }
 
